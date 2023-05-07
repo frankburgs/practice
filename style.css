@@ -2,18 +2,48 @@
   padding: 0;
   margin: 0;
   font-family: sans-serif;
+  font-size: x-large;
 }
 
 body{
   background-color: burlywood;
 }
 
-ul.navigation li {
-  background-color: aquamarine;
-  width: 200px;
-  border: 1px solid gold;
-  height: 50px;
-  line-height: 100%;
+/* Begin nav styling */
+ul.navigation, ul.dropdown{
+  list-style: none;
+}
+
+ul.navigation{
+  background-color: whitesmoke;
   text-align: center;
+}
+
+ul.navigation li{
+  display: inline-block;
   position: relative;
 }
+
+ul li .button{
+  padding: 20px 25px;
+}
+
+ul.dropdown li{
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+ul.navigation li:hover{
+  background-color: blue;
+}
+
+ul li ul.dropdown{
+  position: absolute;
+  display: none;
+}
+
+ul.navigation li:hover ul.dropdown{
+  display: block;
+}
+
